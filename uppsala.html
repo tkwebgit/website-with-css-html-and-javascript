@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="sv">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, width=device-width">
+    <title>Uppsala</title>
+    <link rel="icon" href="media/CityExplorerlogo.png">
+    <link href="material-components-web/material-components-web.css"
+    rel="stylesheet">
+    <link href="material-components-web/material-components-web-extra.css"
+    rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script src="material-components-web/material-components-web.js"></script>
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+  </head>
+  <body>
+    <header id="mdc-toolbar" class="mdc-toolbar mdc-toolbar--fixed mdc-toolbar--waterfall">
+      <div class="mdc-toolbar__row">
+        <section class="mdc-toolbar__section mdc-toolbar__section--align-start">
+          <h2 class="sh2">Rubrik</h2>
+          <a href="#" id="menu" class="material-icons mdc-toolbar__icon--menu">menu</a>
+          <a href="index.html">
+            <img id="navlogga" src="media/CityExplorerlogo.png" alt="logga.png">
+          </a>
+          <ul>
+            <li>
+              <a class="navlink" href="stockholm.html">Stockholm</a>
+            </li>
+            <li>
+              <a class="navlink" href="goteborg.html">Göteborg</a>
+            </li>
+            <li>
+              <a class="navlink" href="malmo.html">Malmö</a>
+            </li>
+            <li>
+              <a class="navlink" href="uppsala.html">Uppsala</a>
+            </li>
+            <li>
+              <a class="navlink" href="vasteros.html">Västerås</a>
+            </li>
+            <li>
+              <a class="navlink" href="orebro.html">Örebro</a>
+            </li>
+          </ul>
+        </section>
+      </div>
+    </header>
+    <aside id="drawer" class="mdc-temporary-drawer mdc-typography">
+      <nav class="mdc-temporary-drawer__drawer">
+        <nav id="icon-with-text-demo" class="mdc-temporary-drawer__content mdc-list">
+          <a class="mdc-list-item drawerlink" href="stockholm.html">
+            <i class="material-icons mdc-list-item__start-detail" aria-hidden="true">location_city</i>Stockholm
+          </a>
+          <a class="mdc-list-item drawerlink" href="goteborg.html">
+            <i class="material-icons mdc-list-item__start-detail" aria-hidden="true">location_city</i>Göteborg
+          </a>
+          <a class="mdc-list-item drawerlink" href="malmo.html">
+            <i class="material-icons mdc-list-item__start-detail" aria-hidden="true">location_city</i>Malmö
+          </a>
+          <a class="mdc-list-item drawerlink  mdc-temporary-drawer--selected" href="#">
+            <i class="material-icons mdc-list-item__start-detail" aria-hidden="true">location_city</i>Uppsala
+          </a>
+          <a class="mdc-list-item drawerlink" href="vasteros.html">
+            <i class="material-icons mdc-list-item__start-detail" aria-hidden="true">location_city</i>Västerås
+          </a>
+          <a class="mdc-list-item drawerlink" href="orebro.html">
+            <i class="material-icons mdc-list-item__start-detail" aria-hidden="true">location_city</i>Örebro
+          </a>
+        </nav>
+      </nav>
+    </aside>
+    <main id="toolbar-fixed" class="mdc-toolbar-fixed-adjust">
+      <img class="citypic" src="media/uppsala.jpg" alt="">
+      <section id="cities-minimap">
+      <h2 class="sh2">Rubrik</h2>
+      <div class="minimap">
+        <iframe id="uppsala" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d128316.7409646115!2d17.5180217791902!3d59.83337721987275!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x465fcbfb8532ab8d%3A0xaa4fe90a85820807!2sUppsala!5e0!3m2!1sen!2sse!4v1507118168935" allowfullscreen>
+        </iframe>
+      </div>
+      <div class="selector">
+        <div class="selector-city-text-image">
+          <img id="stadsvapen" src="media/stadsvapen/uppsala.png" alt="Uppsala statsvapen">
+          <p>Uppsala (äldre stavning Upsala) är en tätort i Uppland, centralort i Uppsala kommun och residensstad för Uppsala län. Den är Sveriges fjärde största tätort med en befolkning på 149 245 invånare (2015)[7], medan hela kommunen har cirka 217 000 invånare (2017)[8].</p>
+        </div>
+      </div>
+    </section>
+    <section id="menu-select-wrapper">
+      <div class="menu-select-wrapper">
+        <h4 class="menu-select-title">Välj aktivitet</h4>
+        <div id="menu-select__activities">
+          <select id="operator_1" class="operator">
+            <option class="option" value="display_all">Alla</option>
+            <option class="option" value="restaurant">Bar/Restaurang/Kök</option>
+            <option class="option" value="shows">Underhållning/Shows</option>
+            <option class="option" value="music">Musik/Konsert</option>
+            <option class="option" value="culture">Museum/Kultur</option>
+            <option class="option" value="guide">Guide/Turism/Upptäck</option>
+          </select>
+        </div>
+      </div>
+      <div id="lowerbox" class="menu-select-wrapper"> <!--align="right"-->
+          <h4 class="menu-select-title">Plats/läge</h4>
+          <div id="menu-select__location">
+            <select id="operator_2" class="operator">
+                <option class="option" value="display_all">Alla</option>
+                <option class="option" value="city">Inner City</option>
+                <option class="option" value="foot">>1km</option>
+                <option class="option" value="local">>3km</option>
+                <option class="option" value="car">>5km</option>
+            </select>
+          </div>
+            <button id="submit" type="button" name="button">Sök</button>
+        </div>
+    </section>
+    <div class="content">
+      <div id="page">
+        <div class="event shows display_all"> <!-- EVENT 1  --------------------------------------->
+          <img src="media/events/biljard_juni2013_w670.jpg" alt="biljard">
+
+          <div class="title"> <!-- TITEL -->
+            <h2>Shuffleboard</h2>
+          </div>
+
+          <div> <!-- TIME -->
+            <h4 class="time">18.00 Ekelundsgatan 11</h4>
+          </div>
+
+
+          <div class="information"> <!-- INFORMATION -->
+            <p>
+              kan du få det bästa av två världar: underhållning och mat. Biljard eller Shuffleboard före, under(?) och efter maten! Njut av din mat tillsammans med ett gott glas. TREVLIG STÄMNING – På Biljardpalatset, då människor söker sig hit inte bara för att äta utan även för underhållning, så kan du räkna med att kvällen fylls med skratt och trevliga samtal från alla håll. TA MED KOMPISARNA
+            </p>
+          </div>
+
+          <a class="buttons"> <!-- POPUP OCH KNAPP -->
+            <i class="fa fa-info-circle" aria-hidden="true"></i>
+          </a>
+          <div class="info showInfo">
+            <button type="button" id="exit">X</button>
+            <h3 class="inforubrik">KARTA</h3>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d128316.7409646115!2d17.5180217791902!3d59.83337721987275!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x465fcbfb8532ab8d%3A0xaa4fe90a85820807!2sUppsala!5e0!3m2!1sen!2sse!4v1507118168935" allowfullscreen></iframe>
+
+            <div id="rating">
+
+              <div class="fulllike">
+                <button id="upvote" type="button"><i class="material-icons">thumb_up</i></button>
+                <div class="likebox">
+                  <p id="likeoutput">0</p>
+                </div>
+              </div>
+
+              <div id="fulldislike">
+                <button id="downvote" type="button"><i class="material-icons">thumb_down</i></button>
+                <div class="likebox">
+                  <p id="dislikeoutput">0</p>
+                </div>
+              </div>
+
+              <div class="commentSection">
+                <input id="comment" type="text">
+
+                <input id="send" type="button" value="Skicka kommentar">
+               <ol id="result"></ol>
+              </div>
+            </div>
+          </div>
+
+          <time datetime="2014-09-20" class="icon"> <!-- DATE -->
+            <em>Tisdag</em>
+            <strong>Januari</strong>
+            <span>6</span>
+          </time>
+        </div> <!-- EVENT ENDS ------------------------------------------------->
+
+        <div class="event shows display_all"> <!-- EVENT 2 ----------------------------------->
+
+          <img class="eventIMG" src="media/events/Peder_FREDRICSON_-SWE-_-_823_H-M_All_In_KA_5249.JPG" alt="Hästtävling">
+
+          <div class="title">
+            <h2>Hästtävling</h2>
+          </div>
+
+          <div>
+            <h4 class="time">14:00 Arenprisgatan 11,<span> 3 Juli</span></h4>
+          </div>
+
+          <div class="information">
+            <p>
+              Malin Baryrad Johnsson och H&M Second Chance radar upp segerar.
+              Nu red Malin hem en seger i Cagnes-Sur-Mer vid franska medelhavskusten i en 145-hoppning, Grand Prix.
+            </p>
+          </div>
+
+          <a class="buttons"> <!-- POPUP OCH KNAPP -->
+            <i class="fa fa-info-circle" aria-hidden="true"></i>
+          </a>
+          <div class="info showInfo">
+            <h3 class="inforubrik">KARTA</h3>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2131.6207248398027!2d11.985041816007229!3d57.70591328112051!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x464ff37b951b500b%3A0x2a5689c89aa098c5!2sUllevi!5e0!3m2!1ssv!2sse!4v1507207518195" style="border:0" allowfullscreen></iframe>
+          </div>
+
+          <time datetime="2017-09-10" class="icon">
+            <em>Tisdag</em>
+            <strong>Juli</strong>
+            <span>03</span>
+          </time>
+        </div> <!-- EVENT ENDS ----------------------------------------------------->
+
+        <div class="event guide display_all"> <!-- EVENT 3 ---------------------------------------------->
+
+          <img class="eventIMG" src="media/events/dpa-from-l-crowen-princess-victoria-of-sweden-prince-carl-philip-princess-D3J83Y.jpg" alt="Yoga">
+
+          <div class="title">
+            <h2>Victoria Mässorna</h2>
+          </div>
+
+          <div>
+            <h4 class="time">13.00 Societetsparken 4<span> 5 April</span></h4>
+          </div>
+
+          <div class="information">
+            <p>
+              Årets Victoriamässor sker på två platser, dels en mässa för hela familjen i Societetsparken i Borgholm på Öland samt dels en mässa med tema God Hälsa vid Ekerum på Öland. På mässan erbjuds aktiviteter, tävlingar och underhållning för alla åldrar.
+            </p>
+          </div>
+
+          <a class="buttons"> <!-- POPUP OCH KNAPP -->
+            <i class="fa fa-info-circle" aria-hidden="true"></i>
+          </a>
+          <div class="info showInfo">
+            <h3 class="inforubrik">KARTA</h3>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2131.6207248398027!2d11.985041816007229!3d57.70591328112051!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x464ff37b951b500b%3A0x2a5689c89aa098c5!2sUllevi!5e0!3m2!1ssv!2sse!4v1507207518195" style="border:0" allowfullscreen></iframe>
+          </div>
+
+          <time datetime="2017-09-12" class="icon">
+            <em>Fredag</em>
+            <strong>April</strong>
+            <span>05</span>
+          </time>
+        </div> <!-- EVENT ENDS ------------------------------------------------>
+
+        <div class="event shows display_all"> <!-- EVENT 4 ----------------------------------------------->
+
+          <img class="eventIMG" src="media/events/DSC_3843.jpg" alt="Göteborg Förr">
+
+          <div class="title">
+            <h2>Maraton</h2>
+          </div>
+
+          <div>
+            <h4 class="time">09.00 Ljuspunkten 4 <span> 10 Maj</span></h4>
+          </div>
+
+          <div class="information">
+          <p>
+            Spartacusstafetten avgjordes i Karlslundsskogen under söndagen med 31 fullföljande lag. Redan på första sträckan satte de tre första lagen i herrklassen högsta fart..
+          </p>
+          </div>
+
+          <a class="buttons"> <!-- POPUP OCH KNAPP -->
+            <i class="fa fa-info-circle" aria-hidden="true"></i>
+          </a>
+          <div class="info showInfo">
+            <h3 class="inforubrik">KARTA</h3>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2131.6207248398027!2d11.985041816007229!3d57.70591328112051!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x464ff37b951b500b%3A0x2a5689c89aa098c5!2sUllevi!5e0!3m2!1ssv!2sse!4v1507207518195" allowfullscreen></iframe> <!--style="border:0"-->
+          </div>
+
+          <time datetime="2017" class="icon">
+            <em>Fredag</em>
+            <strong>Maj</strong>
+            <span>10</span>
+          </time>
+        </div> <!-- EVENT ENDS -------------------------------------------->
+
+      </div>
+    </div>
+    <!-- footer ------------------------------------>
+    <footer>
+      <div id="container">
+      <div class="column">
+      <h2>Håll dig uppdaterad</h2>
+        <form>
+        <label> Förnamn:
+          <input name="first-name" placeholder="" type="text">
+        </label>
+        <label> Efternamn:
+          <input name="password" placeholder="" type="text">
+        </label>
+        <label> Mail:
+          <input type="text" name="mail">
+        </label>
+        <button id="submitKnapp" class="mdc-button mdc-button--raised" type="button">Skicka</button>
+        </form>
+      </div>
+      <div class="column-alert"></div>
+
+      <div id="contactinfo" class="column">
+        <h2>Kontakt information</h2>
+        <div>
+          <p><a href="mailto:cityexplorer@kontakt.se">CityExplorer@kontakt.se</a></p>
+          <p><a href="tel:031-829884">031-829884</a></p>
+          <p>Östra Hamngatan 24, 411 09 Göteborg</p>
+          <p><a href="https://goo.gl/maps/N6cupiri3hx">Karta</a></p>
+        </div>
+      </div>
+
+      <div class="column">
+        <h2 id="socialm">Sociala medier</h2>
+        <div class="icons">
+          <div class="iconplac">
+            <a href="#"><img src="media/facebook-flat-vector-logo.png" alt=""></a>
+            <a href="#"><img src="media/instagram-logo.png" alt=""></a>
+          </div>
+          <div class="iconplac">
+            <div>
+              <a href="#"><img src="media/twitter-icon-square-logo-preview.png" alt=""></a>
+              <a href="#"><img src="media/youtube-icon.png" alt=""></a>
+            </div>
+          </div>
+        </div>
+      </div>
+      </div>
+
+      <div id="copyright">
+        <img id="logotype" src="media/CityExplorerlogo.png" alt="logo">
+        Copyright&copy;2017 Group City Explorer
+      </div>
+    </footer>
+    </main>
+    <script>
+    window.mdc.autoInit();
+    </script>
+    <script src="js/script.js"></script>
+  </body>
+</html>

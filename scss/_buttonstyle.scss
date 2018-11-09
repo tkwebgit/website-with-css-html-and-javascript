@@ -1,0 +1,11 @@
+@mixin button1{
+  margin: auto;
+  width: 20%;
+  left: 40%;
+  position: absolute;
+  top: 160px;
+  background-color: $primarycolor;
+  color: white;
+  border: solid 1px white;
+  border-style: ridge;
+}

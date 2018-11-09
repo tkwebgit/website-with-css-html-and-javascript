@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="sv">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, width=device-width">
+    <title>Västerås</title>
+    <link rel="icon" href="media/CityExplorerlogo.png">
+    <link href="material-components-web/material-components-web.css"
+    rel="stylesheet">
+    <link href="material-components-web/material-components-web-extra.css"
+    rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script src="material-components-web/material-components-web.js"></script>
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+  </head>
+  <body>
+    <header id="mdc-toolbar" class="mdc-toolbar mdc-toolbar--fixed mdc-toolbar--waterfall">
+      <div class="mdc-toolbar__row">
+        <section class="mdc-toolbar__section mdc-toolbar__section--align-start">
+          <a href="#" id="menu" class="material-icons mdc-toolbar__icon--menu">menu</a>
+          <a href="index.html">
+            <img id="navlogga" src="media/CityExplorerlogo.png" alt="logga.png">
+          </a>
+          <ul>
+            <li>
+              <a class="navlink" href="stockholm.html">Stockholm</a>
+            </li>
+            <li>
+              <a class="navlink" href="goteborg.html">Göteborg</a>
+            </li>
+            <li>
+              <a class="navlink" href="malmo.html">Malmö</a>
+            </li>
+            <li>
+              <a class="navlink" href="uppsala.html">Uppsala</a>
+            </li>
+            <li>
+              <a class="navlink" href="vasteros.html">Västerås</a>
+            </li>
+            <li>
+              <a class="navlink" href="orebro.html">Örebro</a>
+            </li>
+          </ul>
+        </section>
+      </div>
+    </header>
+    <aside id="drawer" class="mdc-temporary-drawer mdc-typography">
+      <nav class="mdc-temporary-drawer__drawer">
+        <nav id="icon-with-text-demo" class="mdc-temporary-drawer__content mdc-list">
+          <a class="mdc-list-item drawerlink" href="stockholm.html">
+            <i class="material-icons mdc-list-item__start-detail" aria-hidden="true">location_city</i>Stockholm
+          </a>
+          <a class="mdc-list-item mdc-temporary-drawer--selected drawerlink" href="#">
+            <i class="material-icons mdc-list-item__start-detail" aria-hidden="true">location_city</i>Göteborg
+          </a>
+          <a class="mdc-list-item drawerlink" href="malmo.html">
+            <i class="material-icons mdc-list-item__start-detail" aria-hidden="true">location_city</i>Malmö
+          </a>
+          <a class="mdc-list-item drawerlink" href="uppsala.html">
+            <i class="material-icons mdc-list-item__start-detail" aria-hidden="true">location_city</i>Uppsala
+          </a>
+          <a class="mdc-list-item drawerlink" href="vasteros.html">
+            <i class="material-icons mdc-list-item__start-detail" aria-hidden="true">location_city</i>Västerås
+          </a>
+          <a class="mdc-list-item drawerlink" href="orebro.html">
+            <i class="material-icons mdc-list-item__start-detail" aria-hidden="true">location_city</i>Örebro
+          </a>
+        </nav>
+      </nav>
+    </aside>
+    <main id="toolbar-fixed" class="mdc-toolbar-fixed-adjust">
+      <img class="citypic" src="media/Västerås.jpg" alt="Västerås">
+      <section id="cities-minimap">
+      <div class="minimap">
+        <iframe id="vasteras" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d64560.04723108157!2d16.474879550222777!3d59.6246600376697!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x465e4281455ba9a7%3A0xbc415db6e2654020!2zVsOkc3RlcsOlcw!5e0!3m2!1sen!2sse!4v1507118273014" allowfullscreen>
+        </iframe>
+      </div>
+      <div class="selector">
+        <div class="selector-city-text-image">
+          <img id="stadsvapen" src="media/stadsvapen/vasteras.png" alt="Västerås statsvapen">
+          <p>Västerås är en tätort i Västmanland samt centralort för Västerås kommun, residensstad för Västmanlands län och stiftsstad för Västerås stift. Västerås är Sveriges femte största tätort med 119 372 invånare år 2016. Staden ligger vid Mälarens norra strand cirka 10 mil västnordväst om Stockholm.</p>
+        </div>
+      </div>
+    </section>
+    <section id="menu-select-wrapper">
+      <div class="menu-select-wrapper">
+        <h4 class="menu-select-title">Välj aktivitet</h4>
+        <div id="menu-select__activities">
+          <select id="operator_1" class="operator">
+            <option class="option" value="display_all">Alla</option>
+            <option class="option" value="restaurant">Bar/Restaurang/Kök</option>
+            <option class="option" value="shows">Underhållning/Shows</option>
+            <option class="option" value="music">Musik/Konsert</option>
+            <option class="option" value="culture">Museum/Kultur</option>
+            <option class="option" value="guide">Guide/Turism/Upptäck</option>
+          </select>
+        </div>
+      </div>
+      <div id="lowerbox" class="menu-select-wrapper"> <!--align="right"-->
+          <h4 class="menu-select-title">Plats/läge</h4>
+          <div id="menu-select__location">
+            <select id="operator_2" class="operator">
+              <option class="option" value="display_all">Alla</option>
+              <option class="option" value="city">Inner City</option>
+              <option class="option" value="foot">>1km</option>
+              <option class="option" value="local">>3km</option>
+              <option class="option" value="car">>5km</option>
+            </select>
+          </div>
+            <button id="submit" type="button" name="button">Sök</button>
+        </div>
+    </section>
+    <div class="content">
+      <div id="page">
+        <div class="event music display_all"> <!-- EVENT 1  -------------------------------------->
+
+          <img class="eventIMG" src="media/events/folkfest.jpg" alt="folkfest">
+
+          <div class="title"> <!--TITEL -->
+            <h2>Folkfest</h2>
+          </div>
+
+          <div> <!-- TIME -->
+            <h4 class="time">10:00 slottsskogen<span> 13 Juni</span></h4>
+          </div>
+
+          <div class="information"> <!-- INFORMATION -->
+            <p>
+              Stora delar av Slottskogen var ett enda stort publikhav när delar av fyrspannens Maratonkörningar pågick under lördagen. De stora hästekipagen lockade över 20 000 besökare. Bara vid den första hinderbanan i närheten av Brahebacken hade flera hundra personer samlats. Ljudet av hovarna när fyrspannen tog sig genom slalombanan var mäktigt.
+            </p>
+          </div>
+
+          <a class="buttons"> <!-- POPUP OCH KNAPP -->
+            <i class="fa fa-info-circle" aria-hidden="true"></i>
+          </a>
+          <div class="info showInfo">
+            <button type="button" id="exit">X</button>
+            <h3 class="inforubrik">KARTA</h3>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d64560.04723108157!2d16.474879550222777!3d59.6246600376697!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x465e4281455ba9a7%3A0xbc415db6e2654020!2zVsOkc3RlcsOlcw!5e0!3m2!1sen!2sse!4v1507118273014" allowfullscreen></iframe>
+
+            <div id="rating">
+
+              <div class="fulllike">
+                <button id="upvote" type="button"><i class="material-icons">thumb_up</i></button>
+                <div class="likebox">
+                  <p id="likeoutput">0</p>
+                </div>
+              </div>
+
+              <div id="fulldislike">
+                <button id="downvote" type="button"><i class="material-icons">thumb_down</i></button>
+                <div class="likebox">
+                  <p id="dislikeoutput">0</p>
+                </div>
+              </div>
+
+              <div class="commentSection">
+                <input id="comment" type="text">
+
+                <input id="send" type="button" value="Skicka kommentar">
+               <ol id="result"></ol>
+              </div>
+            </div>
+            </div>
+
+          <time datetime="2017-09-20" class="icon"> <!-- DATE -->
+            <em>Torsdag</em>
+            <strong>Juni</strong>
+            <span>13</span>
+          </time>
+        </div> <!-- EVENT ENDS ------------------------------------------------->
+
+        <div class="event restaurant display_all"> <!-- EVENT 2 ---------------------------------->
+
+          <img class="eventIMG" src="media/events/ansiktsmalning.jpg" alt="anskiktmalning">
+
+          <div class="title">
+            <h2>Ansiktsmålning</h2>
+          </div>
+
+          <div>
+            <h4 class="time">15:30 attehogsgatan<span> 15 November</span></h4>
+          </div>
+
+          <div class="information">
+            <p>
+              Ansiktsmålning är alltid populärt, vi kan förverkliga barnens önskan om att för en dag bli nästan vad som helst. Kanske en cool superhjälte, vacker prinsessa, farligt monster, vilt djur eller något annat eget förslag.
+            </p>
+          </div>
+
+          <a class="buttons"> <!-- POPUP OCH KNAPP -->
+            <i class="fa fa-info-circle" aria-hidden="true"></i>
+          </a>
+          <div class="info showInfo">
+            <h3 class="inforubrik">KARTA</h3>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2131.6207248398027!2d11.985041816007229!3d57.70591328112051!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x464ff37b951b500b%3A0x2a5689c89aa098c5!2sUllevi!5e0!3m2!1ssv!2sse!4v1507207518195" allowfullscreen></iframe>
+          </div>
+
+          <time datetime="2017-09-10" class="icon">
+            <em>Tisdag</em>
+            <strong>November</strong>
+            <span>15</span>
+          </time>
+        </div> <!-- EVENT ENDS ----------------------------------------------------->
+
+        <div class="event shows display_all"> <!-- EVENT 3 ---------------------------------------------->
+
+          <img class="eventIMG" src="media/events/drop.png" alt="Yoga">
+
+          <div class="title">
+            <h2>Drop n shop</h2>
+          </div>
+
+          <div>
+            <h4 class="time">16:30 brunnsgatan<span> 17 Januari</span></h4>
+          </div>
+
+          <div class="information">
+            <p>
+              Har ditt företag begagnade mobiltelefoner som ligger och skräpar? Vill ni göra er av med dem på ett hållbart och miljövänligt sätt?
+              Nu har ni möjlighet att skicka dem till DROP n' SHOP och samtidigt få betalt för dem.
+              DROP n' SHOP:s affärsidé är att vara marknadsledande på pris, snabbhet och service. Det enda du behöver göra är att fylla i det här beställningsformuläret.
+            </p>
+          </div>
+
+          <a class="buttons"> <!-- POPUP OCH KNAPP -->
+            <i class="fa fa-info-circle" aria-hidden="true"></i>
+          </a>
+          <div class="info showInfo">
+            <h3 class="inforubrik">KARTA</h3>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2131.6207248398027!2d11.985041816007229!3d57.70591328112051!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x464ff37b951b500b%3A0x2a5689c89aa098c5!2sUllevi!5e0!3m2!1ssv!2sse!4v1507207518195" allowfullscreen></iframe>
+          </div>
+
+          <time datetime="2017-09-12" class="icon">
+            <em>Torsdag</em>
+            <strong>Januari</strong>
+            <span>17</span>
+          </time>
+        </div> <!-- EVENT ENDS ------------------------------------------------>
+
+        <div class="event culture display_all"> <!-- EVENT 4 ---------------------------------------------->
+
+          <img class="eventIMG" src="media/events/john.jpg" alt="John">
+
+          <div class="title">
+            <h2>John Mayer</h2>
+          </div>
+
+          <div>
+            <h4 class="time">18:00 kungstorget 6<span> 8 Augusti</span></h4>
+          </div>
+
+          <div class="information">
+          <p>
+            Hitta de biljetter till John Mayer som du är ute efter hos viagogo, världens största marknadsplats för biljetter. Välj ett evenemang så kan du se de olika biljetterna som finns tillgängliga eller se turnédatum för John Mayer för att hitta ett kommande evenemang nära dig. Du kan också sälja dina oönskade John Mayer Konsertbiljetter hos viagogo, och det är gratis att lägga upp biljetter till försäljning. Alla John Mayer-biljetter täcks av viagogos biljettgaranti!
+          </p>
+          </div>
+
+          <a class="buttons"> <!-- POPUP OCH KNAPP -->
+            <i class="fa fa-info-circle" aria-hidden="true"></i>
+          </a>
+          <div class="info showInfo">
+            <h3 class="inforubrik">KARTA</h3>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2131.6207248398027!2d11.985041816007229!3d57.70591328112051!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x464ff37b951b500b%3A0x2a5689c89aa098c5!2sUllevi!5e0!3m2!1ssv!2sse!4v1507207518195" allowfullscreen></iframe>
+          </div>
+
+          <time datetime="2017" class="icon">
+            <em>Fredag</em>
+            <strong>Augusti</strong>
+            <span>8</span>
+          </time>
+        </div> <!-- EVENT ENDS -------------------------------------------->
+
+      </div>
+    </div>
+    <!-- footer ------------------------------------>
+    <footer>
+      <div id="container">
+      <div class="column">
+      <h2>Håll dig uppdaterad</h2>
+        <form>
+        <label> Förnamn:
+          <input name="first-name" placeholder="" type="text">
+        </label>
+        <label> Efternamn:
+          <input name="password" placeholder="" type="text">
+        </label>
+        <label> Mail:
+          <input type="text" name="mail">
+        </label>
+        <button id="submitKnapp" class="mdc-button mdc-button--raised" type="button">Skicka</button>
+        </form>
+      </div>
+      <div class="column-alert"></div>
+
+      <div id="contactinfo" class="column">
+        <h2>Kontakt information</h2>
+        <div>
+          <p><a href="mailto:cityexplorer@kontakt.se">CityExplorer@kontakt.se</a></p>
+          <p><a href="tel:031-829884">031-829884</a></p>
+          <p>Östra Hamngatan 24, 411 09 Göteborg</p>
+          <p><a href="https://goo.gl/maps/N6cupiri3hx">Karta</a></p>
+        </div>
+      </div>
+
+      <div class="column">
+        <h2 id="socialm">Sociala medier</h2>
+        <div class="icons">
+          <div class="iconplac">
+            <a href="#"><img src="media/facebook-flat-vector-logo.png" alt=""></a>
+            <a href="#"><img src="media/instagram-logo.png" alt=""></a>
+          </div>
+          <div class="iconplac">
+            <div>
+              <a href="#"><img src="media/twitter-icon-square-logo-preview.png" alt=""></a>
+              <a href="#"><img src="media/youtube-icon.png" alt=""></a>
+            </div>
+          </div>
+        </div>
+      </div>
+      </div>
+
+      <div id="copyright">
+        <img id="logotype" src="media/CityExplorerlogo.png" alt="logo">
+        Copyright&copy;2017 Group City Explorer
+      </div>
+    </footer>
+    </main>
+    <script>
+    window.mdc.autoInit();
+    </script>
+    <script src="js/script.js"></script>
+  </body>
+</html>

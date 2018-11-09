@@ -1,0 +1,30 @@
+@mixin maintype {
+  font-size: 1rem;
+  color: white;
+  font-family: 'raleway', sans-serif;
+}
+@mixin eventmix {
+  margin-top: 20px;
+  background-color: beige;
+  box-shadow: 7px 5px rgba(0, 0, 0, 0.5);
+  box-sizing: border-box;
+  display: block;
+  float: left;
+  position: relative;
+  width: 768px;
+  color: black;
+}
+
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+     -moz-border-radius: $radius;
+      -ms-border-radius: $radius;
+       -o-border-radius: $radius;
+          border-radius: $radius;
+}
+
+
+
+
+
+

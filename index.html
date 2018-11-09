@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="sv">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, width=device-width">
+    <title>City Explorer</title>
+    <link href="material-components-web/material-components-web.css"
+    rel="stylesheet">
+    <link href="material-components-web/material-components-web-extra.css"
+    rel="stylesheet">
+    <link rel="stylesheet" href="css/stylestart.css">
+    <script src="material-components-web/material-components-web.js"></script>
+    <script src="js/jquery-3.2.1.min.js"></script>
+  </head>
+  <body>
+    <div>
+      <video  autoplay poster="media/gabriel-santiago-19756.jpg" loop>
+        <source src="media/Video.mp4" type="video/mp4">
+      </video>
+    </div>
+    <div class="background">
+      <div id="logo">
+      </div>
+      <br>
+      <br>
+      <div class="description">
+        <p class="mdc-typography--headline " id="descriptiontext">Med CityExplorer kan du<br> på ett enkelt och modernt sätt utforska din favoritstad.<br>Vårt mål är att ge dig den bästa möjliga användarupplevelsen!
+        <br>
+        Klicka på knappen nedan för att välja stad.</p>
+      </div>
+      <div class="citiesclass">
+          <button id="knappner" class="mdc-fab material-icons mdc-fab--mini knappner" aria-label="keyboard arrow down">
+            <a href="#citiesId">
+            <span class="mdc-fab__icon">
+              keyboard_arrow_down
+            </span>
+            </a>
+          </button>
+          <button id="knappupp" class="mdc-fab material-icons mdc-fab--mini knappupp" aria-label="keyboard arrow up">
+            <span class="mdc-fab__icon">
+              keyboard_arrow_up
+            </span>
+          </button>
+      </div>
+    </div>
+    <div id="citiesId" class="cities">
+      <div class="mdc-grid-list mdc-grid-list--tile-aspect-16x9">
+      <ul class="mdc-grid-list__tiles">
+        <li class="mdc-grid-tile">
+          <div class="mdc-grid-tile__primary">
+          <a href="stockholm.html"><img class="mdc-grid-tile__primary-content" src="media/stockholm.jpg" alt="stockholm"/></a>
+          </div>
+        </li>
+        <li class="mdc-grid-tile">
+          <div class="mdc-grid-tile__primary">
+            <a href="goteborg.html"><img class="mdc-grid-tile__primary-content" src="media/göteborg.jpg" alt="göteborg"/></a>
+          </div>
+        </li>
+        <li class="mdc-grid-tile">
+          <div class="mdc-grid-tile__primary">
+            <a href="malmo.html"><img class="mdc-grid-tile__primary-content" src="media/malmo.jpg" alt="malmö"/></a>
+          </div>
+        </li>
+        <li class="mdc-grid-tile">
+          <div class="mdc-grid-tile__primary">
+            <a href="uppsala.html"><img class="mdc-grid-tile__primary-content" src="media/uppsala.jpg" alt="uppsala"/></a>
+          </div>
+        </li>
+        <li class="mdc-grid-tile">
+          <div class="mdc-grid-tile__primary">
+            <a href="vasteros.html"><img class="mdc-grid-tile__primary-content" src="media/västerås.jpg" alt="västerås"/></a>
+          </div>
+        </li>
+        <li class="mdc-grid-tile">
+          <div class="mdc-grid-tile__primary">
+            <a href="orebro.html"><img class="mdc-grid-tile__primary-content" src="media/örebro.jpg" alt="örebro"/></a>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <footer>
+    <div id="container">
+    <div class="column">
+    <h2>Håll dig uppdaterad</h2>
+      <form>
+      <label> Förnamn:
+        <input name="first-name" placeholder="" type="text">
+      </label>
+      <label> Efternamn:
+        <input name="password" placeholder="" type="text">
+      </label>
+      <label> Mail:
+        <input type="text" name="mail">
+      </label>
+        <button id="submitKnapp" class="mdc-button mdc-button--raised" type="button">Skicka</button>
+      </form>
+    </div>
+    <div class="column-alert"></div>
+
+    <div id="contactinfo" class="column">
+      <h2>Kontakt information</h2>
+      <div>
+        <p><a href="mailto:cityexplorer@kontakt.se">CityExplorer@kontakt.se</a></p>
+        <p><a href="tel:031-829884">031-829884</a></p>
+        <p>Östra Hamngatan 24<br> 411 09 Göteborg</p>
+        <p><a href="https://goo.gl/maps/N6cupiri3hx">karta</a></p>
+      </div>
+    </div>
+
+    <div class="column">
+      <h2 id="socialm">Sociala medier</h2>
+      <div class="icons">
+        <div class="iconplac">
+          <a href="#"><img src="media/facebook-flat-vector-logo.png" alt=""></a>
+          <a href="#"><img src="media/instagram-logo.png" alt=""></a>
+        </div>
+        <div class="iconplac">
+          <div>
+            <a href="#"><img src="media/twitter-icon-square-logo-preview.png" alt=""></a>
+            <a href="#"><img src="media/youtube-icon.png" alt=""></a>
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+
+    <div id="copyright">
+      <img id="logotype" src="media/CityExplorerlogo.png" alt="logo">
+      Copyright&copy;2017 Group City Explorer
+    </div>
+  </footer>
+    <script>
+      window.mdc.autoInit();
+    </script>
+    <script src="js/script.js"></script>
+  </body>
+</html>
